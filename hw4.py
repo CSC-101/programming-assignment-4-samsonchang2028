@@ -55,6 +55,7 @@ def is_function(list_value):
     else:
         return False
 def operations_seconds_element(line_list):
+    global full_data
     if line_list[0] == 'filter-gt':
         if line_list[1] == 'Education':
             if not is_float(line_list[3]):
@@ -127,6 +128,7 @@ def operations_seconds_element(line_list):
         else:
             print('System Error, cannot find comparison for percent')
 def print_demo(demo_list:list[CountyDemographics]):
+
     for attributes in demo_list:
         print(attributes.county,',',attributes.state)
         print('Population',attributes.population['2014 Population'])
